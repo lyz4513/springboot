@@ -1,13 +1,17 @@
 package com.example.springboot_hellword.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
+@RequestMapping("/user")
 public class UserController {
 
     private static final String a = "ss";
 
+    @GetMapping("a")
     public void user () {
-        System.out.println("a");
+        System.out.println(a);
     }
 }
